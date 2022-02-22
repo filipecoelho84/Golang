@@ -24,7 +24,6 @@ import "fmt"
 func personName(name string) string {
 	fmt.Println("Hello", name)
 	return name
-
 }
 
 //* Write a function that returns any message, and call it from within
@@ -51,7 +50,7 @@ func anyTwoNumbers(y, z int) (int, int) {
 
 func main() {
 
-	personName("Filipe Coelho e Sara Garcia")
+	personName("Filipe Coelho")
 
 	fmt.Println(anyMessage("Any message!"))
 
@@ -61,11 +60,11 @@ func main() {
 	randomNumber := anyNumber(37)
 	fmt.Println("The chosen number was", randomNumber)
 
-	firstRandomNumber, secondrandomNumber := anyTwoNumbers(37, 40)
-	fmt.Println("The first random number is", firstRandomNumber, "\nThe second random number is", secondrandomNumber)
+	firstRandomNumber, secondRandomNumber := anyTwoNumbers(37, 40)
+	fmt.Println("The first random number is", firstRandomNumber, "\nThe second random number is", secondRandomNumber)
 
 	//* Add three numbers together using any combination of the existing functions.
-	add3Numbers := anyNumber(6) + firstRandomNumber + secondrandomNumber
+	add3Numbers := anyNumber(6) + firstRandomNumber + secondRandomNumber
 	fmt.Println("The add of the 3 numbers are", add3Numbers)
-
+	
 }
