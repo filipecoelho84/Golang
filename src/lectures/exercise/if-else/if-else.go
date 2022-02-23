@@ -53,6 +53,8 @@ func main() {
 	// The day and role. Change these to check your work.
 	today, role := Sunday, Contractor
 
+	// **First solution**
+
 	//* Use the accessGranted() and accessDenied() functions to display
 	//  informational messages
 	if role == Admin || role == Manager {
@@ -71,7 +73,7 @@ func main() {
 		accessDenied()
 	}
 
-	// Second solution**
+	// **Possible Second solution**
 
 	// func accessGranted(day int, user int) {
 	// 	if day < 7 && (user == 10 || user == 20) {
@@ -92,10 +94,10 @@ func main() {
 	// }
 
 	// func main() {
-	//// The day and role. Change these to check your work.
+	// // The day and role. Change these to check your work.
 	// 	accessGranted(Saturday, Contractor)
 
-	// First Solution**
+	// **Possible Third Solution**
 
 	// //* Access at any time: Admin, Manager
 	// if today, role := Saturday, Admin; today < 6 && role == 10 {
