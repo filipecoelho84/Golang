@@ -21,7 +21,7 @@ import "fmt"
 //  - Products must include the price and the name
 type Product struct {
 	name  string
-	price float64
+	price int
 }
 
 // func sum(products [4]Product) {
