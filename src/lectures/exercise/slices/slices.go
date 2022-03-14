@@ -24,7 +24,6 @@ func printContents(contents []Part) {
 	for i := 0; i < len(contents); i++ {
 		parts := contents[i]
 		fmt.Println(parts)
-
 	}
 
 }
