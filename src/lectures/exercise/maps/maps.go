@@ -17,8 +17,6 @@
 
 package main
 
-import "fmt"
-
 const (
 	Online      = 0
 	Offline     = 1
@@ -26,6 +24,12 @@ const (
 	Retired     = 3
 )
 
+//* Create a function to print server status, including:
+//  - Number of servers
+//  - Number of servers for each status (Online, Offline, Maintenance, Retired)
+
 func main() {
 	servers := []string{"darkstar", "aiur", "omicron", "w359", "baseline"}
+
+	ServerStatus := make(map[string]int)
 }
