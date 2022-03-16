@@ -33,5 +33,5 @@ func main() {
 	rooms[2].cleaned = true
 	rooms[3].cleaned = true
 
-	checkCleanliness(rooms)	
+	checkCleanliness(rooms)
 }
