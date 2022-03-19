@@ -62,10 +62,10 @@ func (player *Player) consumeEnergy(amount uint) {
 
 func main() {
 	player := Player{
-		name: "Filipe",
-		health: 100,
+		name:      "Filipe",
+		health:    100,
 		maxHealth: 100,
-		energy: 500,
+		energy:    500,
 		maxEnergy: 500,
 	}
 
@@ -75,5 +75,4 @@ func main() {
 	player.addEnergy(10)
 
 	player.consumeEnergy(9999)
-
 }
