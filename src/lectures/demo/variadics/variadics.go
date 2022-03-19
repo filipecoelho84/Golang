@@ -21,5 +21,4 @@ func main() {
 
 	answer = sum(1, 2, 3, 4, 5, 6)
 	fmt.Println(answer)
-
 }
