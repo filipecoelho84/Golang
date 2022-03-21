@@ -54,5 +54,4 @@ func TestEnergy(t *testing.T) {
 	if player.energy > player.maxEnergy {
 		t.Fatalf("Energy: %v. Maximum: %v", player.energy, player.maxEnergy)
 	}
-
 }
