@@ -3,14 +3,14 @@ package swatch
 import (
 	"image/color"
 
+	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/canvas"
-	"fyne.io/fyne/v2/widget"
 )
 
 type SwatchRenderer struct {
-	square canvas.Rectangle
+	square  canvas.Rectangle
 	objects []fyne.CanvasObject
-	parent *Swatch
+	parent  *Swatch
 }
 
 func (renderer *SwatchRenderer) MinSize() fyne.Size {
@@ -26,7 +26,7 @@ func (renderer *SwatchRenderer) Refresh() {
 	renderer.square.FillColor = renderer.parent.Color
 	if renderer.parent.Selected {
 		renderer.square.StrokeWidth = 3
-		renderer.square.StrokeColor = color.NRGBA{255,255,255,255}
+		renderer.square.StrokeColor = color.NRGBA{255, 255, 255, 255}
 		renderer.objects[0] = &renderer.square
 	} else {
 		renderer.square.StrokeWidth = 0
