@@ -9,6 +9,11 @@ type PxCanvasRenderer struct {
 	pxCanvas     *PxCanvas
 	canvasImage  *canvas.Image
 	canvasBorder []canvas.Line
+	canvasCursor []fyne.CanvasObject
+}
+
+func (renderer *PxCanvasRenderer) SetCursor(objects []fyne.CanvasObject) {
+	renderer.canvasCursor = objects
 }
 
 // WidgetRenderer interface implementation.
@@ -17,19 +22,18 @@ func (renderer *PxCanvasRenderer) MinSize() fyne.Size {
 }
 
 // WidgetRenderer interface implementation.
-func (renderer *PxCanvasRenderer) Objects() fyne.CanvasObject {
+func (renderer *PxCanvasRenderer) Objects() []fyne.CanvasObject {
 	objects := make([]fyne.CanvasObject, 0, 5)
 	for i := 0; i < len(renderer.canvasBorder); i++ {
 		objects = append(objects, &renderer.canvasBorder[i])
 	}
 	objects = append(objects, renderer.canvasImage)
+	objects = append(objects, renderer.canvasCursor...)
 	return objects
 }
 
 // WidgetRenderer interface implementation.
-func (renderer *PxCanvasRenderer) Destroy() {
-
-}
+func (renderer *PxCanvasRenderer) Destroy() {}
 
 // WidgetRenderer interface implementation.
 func (renderer *PxCanvasRenderer) Layout(size fyne.Size) {

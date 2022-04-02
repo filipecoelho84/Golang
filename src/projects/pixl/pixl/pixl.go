@@ -3,8 +3,10 @@ package main
 import (
 	"image/color"
 
+	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/app"
 	"zerotomastery.io/pixl/apptype"
+	"zerotomastery.io/pixl/pxcanvas"
 	"zerotomastery.io/pixl/swatch"
 	"zerotomastery.io/pixl/ui"
 )
